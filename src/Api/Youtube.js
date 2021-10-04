@@ -6,7 +6,7 @@ export default Axios.create({
   params: {
     part: "snippet",
     type: "video",
-    maxResults: 10,
+    maxResults: 25,
     key: key,
   },
 });
