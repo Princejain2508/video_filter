@@ -34,10 +34,12 @@ const VideoList = ({ videos, onVideoSelect, videosStats }) => {
         parseInt(element.statsData?.viewCount),
         parseInt(element.statsData?.likeCount),
       ];
-      if (fromYear !== 0 && fromYear > date) return null;
-      else if (toYear !== 0 && toYear < date) return null;
-      else if (minLikes !== 0 && minLikes > likes) return null;
-      else if (!minViews !== 0 && minViews > views) return null;
+      if (fromYear !== 0 && fromYear !== "" && fromYear > date) return null;
+      else if (toYear !== 0 && toYear !== "" && toYear < date) return null;
+      else if (minLikes !== 0 && minLikes !== "" && minLikes > likes)
+        return null;
+      else if (minViews !== 0 && minViews !== "" && minViews > views)
+        return null;
       else
         return (
           <VideoItem
