@@ -4,10 +4,10 @@ import VideoItem from "./VideoItem";
 const VideoList = ({ videos, onVideoSelect, videosStats }) => {
   const [video, setVideo] = useState([]);
   const [renderVideos, setRenderVideos] = useState([]);
-  const [fromYear, setFromYear] = useState(0);
-  const [toYear, setToYear] = useState(0);
-  const [minLikes, setMinLikes] = useState(0);
-  const [minViews, setMinViews] = useState(0);
+  const [fromYear, setFromYear] = useState("");
+  const [toYear, setToYear] = useState("");
+  const [minLikes, setMinLikes] = useState("");
+  const [minViews, setMinViews] = useState("");
 
   useEffect(() => {
     const result = videos.map((ele, i) => {
