@@ -20,10 +20,10 @@ const VideoList = ({ videos, onVideoSelect, videosStats }) => {
       return ele;
     });
     setVideo(result);
-    setFromYear(0);
-    setToYear(0);
-    setMinLikes(0);
-    setMinLikes(0);
+    setFromYear("");
+    setToYear("");
+    setMinLikes("");
+    setMinLikes("");
     onFilterRender();
   }, [videos, videosStats]); // eslint-disable-line react-hooks/exhaustive-deps
 
